@@ -2,6 +2,8 @@ package com.example.demo.configuration;
 
 import com.rabbitmq.client.impl.AMQImpl;
 import org.springframework.amqp.core.*;
+import org.springframework.amqp.support.converter.JacksonJsonMessageConverter;
+import org.springframework.amqp.support.converter.MessageConverter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -30,5 +32,11 @@ public class RabbitConfiguration {
         return BindingBuilder.bind(emailQueue())
                 .to(exchange())
                 .with(EMAIL_ROUTING);
+    }
+
+    @Bean
+    public MessageConverter messageConverter()
+    {
+        return new JacksonJsonMessageConverter();
     }
 }
