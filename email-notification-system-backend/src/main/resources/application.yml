@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: email-notification-system
+
+  rabbitmq:
+    host: localhost
+    password: admin
+    username: admin
+    port: 5672
+
