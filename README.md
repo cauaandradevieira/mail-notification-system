@@ -48,8 +48,6 @@ processamento assíncrono de envio de e-mails.
 -   Listagem de contatos
 -   Edição e exclusão
 
-Campos: - Nome - Email
-
 ------------------------------------------------------------------------
 
 ### 🗂️ Gerenciamento de Grupos
@@ -98,10 +96,7 @@ Escalabilidade - Tolerância a falhas
 
 ## 🗄️ Modelagem Inicial
 
-Entidades principais: - Contato - Grupo - Email - EmailEnvio
-
-Relacionamentos: - Um grupo possui muitos contatos - Um contato pode
-pertencer a vários grupos - Um envio pode ter vários destinatários
+Entidades principais: - Contato - Grupo - EmailEnvio
 
 ------------------------------------------------------------------------
 
@@ -137,24 +132,10 @@ Configurar `application.yml`:
 
 ------------------------------------------------------------------------
 
-### 4️⃣ Rodar Backend
-
-    mvn spring-boot:run
-
-------------------------------------------------------------------------
-
-### 5️⃣ Rodar Frontend
-
-    npm install
-    ng serve
-
-------------------------------------------------------------------------
-
 ## 🎯 Objetivo Acadêmico
 
 -   Aprender arquitetura orientada a eventos
 -   Trabalhar com RabbitMQ
--   Entender processamento assíncrono
 -   Praticar separação de camadas
 -   Integrar Angular + Spring Boot
 
